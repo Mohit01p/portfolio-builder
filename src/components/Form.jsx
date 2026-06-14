@@ -105,12 +105,32 @@ function Form({
           placeholder="Your Name"
         />
 
-        <label>Profile Picture URL</label>
+        <label>Profile Picture</label>
+        {avatar && (
+          <img
+            src={avatar}
+            alt="preview"
+            style={{
+              width: "80px",
+              height: "80px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              marginBottom: "8px",
+              display: "block",
+            }}
+          />
+        )}
         <input
-          type="text"
-          value={avatar}
-          onChange={(e) => setAvatar(e.target.value)}
-          placeholder="https://example.com/photo.jpg"
+          type="file"
+          accept="image/*"
+          onChange={(e) => {
+            const file = e.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onloadend = () => setAvatar(reader.result);
+              reader.readAsDataURL(file);
+            }
+          }}
         />
 
         <label>Email</label>
