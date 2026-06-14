@@ -8,7 +8,7 @@ A React application that generates a live developer portfolio as you fill out a 
 
 ## 🌐 Live Demo
 
-[View Live on Netlify](https://your-netlify-url.netlify.app)
+[View Live on Netlify](https://auto-portfolio-builder.netlify.app)
 
 ---
 
