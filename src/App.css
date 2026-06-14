@@ -1,0 +1,509 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/* ---- Form Panel ---- */
+.form-panel {
+  padding: 2rem;
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0;
+}
+
+.form-panel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-panel h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-panel label {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.form-panel input,
+.form-panel textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-family: sans-serif;
+}
+
+.form-panel input:focus,
+.form-panel textarea:focus {
+  border-color: #888;
+}
+
+/* ---- Skills ---- */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  min-height: 28px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ede9fe;
+  color: #5b21b6;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.skill-tag button {
+  background: none;
+  border: none;
+  color: #7c3aed;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.skill-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.skill-input-row input {
+  flex: 1;
+}
+
+.skill-input-row button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.skill-input-row button:hover {
+  background: #f3f3f3;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+/* ---- Education & Project Cards ---- */
+.entry-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.add-btn {
+  margin-top: 6px;
+  padding: 8px 14px;
+  border: 1px dashed #bbb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #555;
+  width: 100%;
+}
+
+.add-btn:hover {
+  background: #f3f3f3;
+}
+
+.remove-btn {
+  float: right;
+  background: none;
+  border: none;
+  color: #e53e3e;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ---- Portfolio Preview ---- */
+.preview-panel {
+  padding: 2rem;
+  overflow-y: auto;
+  background: #f9f9f9;
+}
+
+.empty-state {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.portfolio-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #e5e7eb;
+}
+
+.portfolio-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.portfolio-section {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 1rem;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.portfolio-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio-skill-tag {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.portfolio-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.card-sub {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.card-year {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.card-link {
+  font-size: 0.82rem;
+  color: #7c3aed;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 7px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  text-decoration: none;
+  color: #333;
+  background: white;
+  transition: background 0.15s;
+}
+
+.social-btn:hover {
+  background: #f3f4f6;
+}
+/* ---- Dark Mode ---- */
+[data-theme="dark"] {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .form-panel {
+  background: #1e293b;
+  border-right-color: #334155;
+}
+
+[data-theme="dark"] .preview-panel {
+  background: #0f172a;
+}
+
+[data-theme="dark"] .form-panel input,
+[data-theme="dark"] .form-panel textarea {
+  background: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .form-panel input:focus,
+[data-theme="dark"] .form-panel textarea:focus {
+  border-color: #94a3b8;
+}
+
+[data-theme="dark"] .form-panel label {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .form-panel h3 {
+  color: #64748b;
+}
+
+[data-theme="dark"] .entry-card {
+  border-color: #334155;
+  background: #1e293b;
+}
+
+[data-theme="dark"] .add-btn {
+  background: #1e293b;
+  border-color: #475569;
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .add-btn:hover {
+  background: #334155;
+}
+
+[data-theme="dark"] .portfolio-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .portfolio-name {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .portfolio-contacts {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .about-text {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .card-title {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .card-sub,
+[data-theme="dark"] .card-desc {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .section-title {
+  color: #475569;
+  border-bottom-color: #1e293b;
+}
+
+[data-theme="dark"] .social-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .social-btn:hover {
+  background: #334155;
+}
+
+[data-theme="dark"] .skill-input-row button {
+  background: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.theme-toggle button {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+[data-theme="dark"] .theme-toggle button {
+  background: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+/* ---- PDF Print Styles ---- */
+@media print {
+
+  /* Hide everything */
+  .form-panel,
+  .download-bar,
+  .theme-toggle {
+    display: none !important;
+  }
+
+  /* Make preview take full page */
+  .app-container {
+    display: block;
+    height: auto;
+  }
+
+  .preview-panel {
+    width: 100%;
+    padding: 2rem;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Reset card colors for print */
+  .portfolio-card {
+    border: 1px solid #ddd !important;
+    background: white !important;
+    break-inside: avoid;
+  }
+
+  .portfolio-name {
+    color: black !important;
+  }
+
+  .card-title {
+    color: black !important;
+  }
+
+  .about-text,
+  .card-sub,
+  .card-desc,
+  .card-year {
+    color: #333 !important;
+  }
+
+  /* Skills tags */
+  .portfolio-skill-tag {
+    background: #e0e7ff !important;
+    color: #3730a3 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Social buttons */
+  .social-btn {
+    border: 1px solid #ddd !important;
+    color: #333 !important;
+  }
+
+  /* Show URLs next to links when printing */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7rem;
+    color: #666;
+  }
+}/* ---- Download Button ---- */
+.download-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.download-btn {
+  padding: 8px 18px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.download-btn:hover {
+  background: #6d28d9;
+}
+
+[data-theme="dark"] .download-btn {
+  background: #6d28d9;
+}
